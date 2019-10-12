@@ -1,0 +1,11 @@
+pip-tools
+psycopg2-binary
+jupyter
+jupyterlab
+matplotlib
+numpy
+pandas
+torch
+torchvision
+jupyter-contrib-nbextensions==0.5.1
+Pillow

@@ -1,0 +1,9 @@
+/__pycache__
+/fast_neural_style
+/art
+/.ipynb_checkpoints
+.password
+/saved_models
+saved_models.zip
+.DS_Store
+*.swp
