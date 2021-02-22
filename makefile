@@ -23,7 +23,7 @@ endif
 
 # detect if running on AWS GPU
 ifeq "$(uname)" "Linux"
-	runtime := --runtime=nvidia
+	runtime := --gpus all 
 	Proc	:= GPU
 endif
 
@@ -72,7 +72,6 @@ run:
 					-v $$HOME/data/torch:/root/.torch \
 					--ipc=host \
 					--shm-size 50G \
-					$(runtime)\
 					--name="$(PROJECT_NAME)-${FUNCTION_NAME}" \
 					${cont} \
 					jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.password='${JUPYTER_PASSWORD_SHA}'
